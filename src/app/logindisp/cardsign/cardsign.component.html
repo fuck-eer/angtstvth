@@ -1,0 +1,20 @@
+<div class="cardsig">
+    <div class="logchead">
+        <h2>SignUp</h2>
+       
+        <!-- <div class="imgusr">
+        
+        </div> -->
+    </div>
+
+    <p *ngIf="erroroc" class="error">{{error | lowercase}}</p>
+
+<form #f='ngForm' (ngSubmit)='onsubmit()' >
+
+    <input type="text" placeholder="Name" name='name' ngModel required minlength='4'>
+    <input type="email" placeholder="Email" name='email' ngModel email required>
+    <input type="password" placeholder="Password" name='password' ngModel required minlength='6'>
+    <button [disabled]="!f.valid" >SignUp</button>
+</form>
+
+</div>

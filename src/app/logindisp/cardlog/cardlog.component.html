@@ -1,0 +1,22 @@
+<div class="cardlog">
+    <div class="logchead">
+        <h2>Login</h2>
+       <p>Forget Password?</p>
+    </div>
+
+<!-- <div class="imgusr">
+
+</div> -->
+
+<p class="error" *ngIf="erroroc">{{error | lowercase}}</p>
+
+<form #f='ngForm' (ngSubmit)='onlogin()' >
+
+    <input type="text" placeholder="Username" name='email' ngModel email required>
+    <input type="password" placeholder="Password" name='password' ngModel  required>
+    <button [disabled]='!f.valid'>Login</button>
+
+</form>
+</div>
+
+<!-- <p>cardlog works!</p> -->

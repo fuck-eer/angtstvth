@@ -1,0 +1,20 @@
+<div class="lognav">
+    <ul>
+        <li>User</li>
+        <li>Retailer</li>
+    </ul>
+</div>
+
+<div class="logcard">
+
+    <div class="loginc" *ngIf="getlogin()==true">
+        <app-cardlog></app-cardlog>
+        <p (click)="togglelogin()">Dont have an account?</p>
+    </div>
+
+    <div class="signc" *ngIf="getlogin()==false">
+        <p (click)="togglelogin()">have an account?</p>
+       <app-cardsign></app-cardsign>
+    </div>
+
+</div>
